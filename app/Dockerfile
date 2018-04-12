@@ -38,7 +38,7 @@ RUN curl -sS https://getcomposer.org/installer | php \
   && mv composer.phar /usr/local/bin/composer
 
 # Install Drush
-RUN curl -fSL http://files.drush.org/drush.phar -o /usr/local/bin/drush \
+RUN curl -fSL https://github.com/drush-ops/drush/releases/download/8.1.14/drush.phar -o /usr/local/bin/drush \
   && chmod +x /usr/local/bin/drush \
   && curl -fSL https://raw.githubusercontent.com/civicrm/civicrm-drupal/7.x-master/drush/civicrm.drush.inc -o /usr/share/drush/commands/civicrm.drush.inc --create-dirs
 # COPY civicrm.drush.inc /usr/share/drush/commands/civicrm.drush.inc
